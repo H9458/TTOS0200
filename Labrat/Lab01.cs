@@ -100,6 +100,7 @@ namespace Labrat
 
         public static void Tehtava04()
         {
+            //Tee ohjelma, jossa kysytään käyttäjältä tämän ikä. Jos ikä on alle 18 vuotta, tulosta "alaikäinen", jos se on 18-65 vuotta, tulosta "aikuinen", muussa tapauksessa tulosta "seniori".
             int luku;
             Console.WriteLine("Anna ikä: ");
             luku = int.Parse(Console.ReadLine());
@@ -119,7 +120,28 @@ namespace Labrat
 
         }
         
+        public static void Tehtava05()
+        {
+            //Tee ohjelma, joka näyttää annetun sekuntimäärän tunteina, minuutteina ja sekunteina. Aikamääre sekuntteina kysytään käyttäjältä.
+            int sekunti;
+            Console.WriteLine("Anna sekuntimäärä: ");
+            sekunti = int.Parse(Console.ReadLine());
+            TimeSpan span = new TimeSpan(0, 0, sekunti);
 
+            Console.WriteLine("{0:0}h {1:00}m {2:00}s",span.Hours, span.Minutes, span.Seconds);
+        }
+
+        public static void Tehtava06()
+        {
+            //Auton kulutus on 7.02 litraa 100 kilometrin matkalla ja bensan hinta on 1.595 Euroa. Tee ohjelma, joka tulostaa ajetulla matkalla (kysytään käyttäjältä) kuluvan bensan määrän sekä bensaan menevän rahan määrän.
+            double kulutus=0.0702;
+            int matka;
+            Console.WriteLine("Anna matkan pituus (km): ");
+            matka = int.Parse(Console.ReadLine());
+            double litraa = kulutus*matka;
+            double hinta= litraa*1.595;
+            Console.WriteLine("matkaan kuluu {0} litraa bensaa ja {1} euroa",litraa,hinta);
+        }
     }
     
 }
