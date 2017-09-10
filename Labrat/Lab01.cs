@@ -83,8 +83,40 @@ namespace Labrat
 
         public static void Tehtava03()
         {
+            //Tee ohjelma, joka kysyy käyttäjältä kolme lukua ja tulostaa niiden summan ja keskiarvon.
+            int luku1;
+            int luku2;
+            int luku3;
+            Console.WriteLine("Anna luku1: ");
+            luku1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Anna luku2: ");
+            luku2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Anna luku3: ");
+            luku3 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Lukujen summa on: "+ (luku1+luku2+luku3));
+            Console.WriteLine("Lukujen keskiarvo on: "+(luku1+luku2+luku3)/3);
+
+        }
+
+        public static void Tehtava04()
+        {
             int luku;
-            Console.WriteLine("Anna kolme lukua: ");
+            Console.WriteLine("Anna ikä: ");
+            luku = int.Parse(Console.ReadLine());
+            if (luku >= 0 && luku <= 17)
+            {
+                Console.WriteLine("Alaikäinen");
+            }
+            else if (luku >= 18 && luku <= 65)
+            {
+                Console.WriteLine("Aikuinen");
+            }
+            else if (luku >= 66)
+            {
+                Console.WriteLine("Seniori");
+            }
+
+
         }
         
 
