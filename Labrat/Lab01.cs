@@ -32,20 +32,18 @@ namespace Labrat
             {
                 Console.WriteLine("Kolme ");
             }
-            else
-            {
-                if (luku != luku1 && luku != luku2 && luku != luku3) ;
+            if  (luku < 1 || luku > 3)
                 {
                     Console.WriteLine("Joku muu luku.");
                 }
-            }
+        
         }
 
 
-         public static void Tehtava02()
+        public static void Tehtava02()
         {
             //Tee ohjelma, jossa annetaan oppilaalle koulunumero seuraavan taulukon mukaan (pistemäärä kysytään ja ohjelma tulostaa numeron):
-         
+
             int luku;
             Console.WriteLine("Anna pistemäärä: ");
             luku = int.Parse(Console.ReadLine());
@@ -93,8 +91,8 @@ namespace Labrat
             luku2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Anna luku3: ");
             luku3 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Lukujen summa on: "+ (luku1+luku2+luku3));
-            Console.WriteLine("Lukujen keskiarvo on: "+(luku1+luku2+luku3)/3);
+            Console.WriteLine("Lukujen summa on: " + (luku1 + luku2 + luku3));
+            Console.WriteLine("Lukujen keskiarvo on: " + (luku1 + luku2 + luku3) / 3);
 
         }
 
@@ -119,7 +117,7 @@ namespace Labrat
 
 
         }
-        
+
         public static void Tehtava05()
         {
             //Tee ohjelma, joka näyttää annetun sekuntimäärän tunteina, minuutteina ja sekunteina. Aikamääre sekuntteina kysytään käyttäjältä.
@@ -128,22 +126,125 @@ namespace Labrat
             sekunti = int.Parse(Console.ReadLine());
             TimeSpan span = new TimeSpan(0, 0, sekunti);
 
-            Console.WriteLine("{0:0}h {1:00}m {2:00}s",span.Hours, span.Minutes, span.Seconds);
+            Console.WriteLine("{0:0}h {1:00}m {2:00}s", span.Hours, span.Minutes, span.Seconds);
         }
 
         public static void Tehtava06()
         {
             //Auton kulutus on 7.02 litraa 100 kilometrin matkalla ja bensan hinta on 1.595 Euroa. Tee ohjelma, joka tulostaa ajetulla matkalla (kysytään käyttäjältä) kuluvan bensan määrän sekä bensaan menevän rahan määrän.
-            double kulutus=0.0702;
+            double kulutus = 0.0702;
             int matka;
             Console.WriteLine("Anna matkan pituus (km): ");
             matka = int.Parse(Console.ReadLine());
-            double litraa = kulutus*matka;
-            double hinta= litraa*1.595;
-            Console.WriteLine("matkaan kuluu {0} litraa bensaa ja {1} euroa",litraa,hinta);
+            double litraa = kulutus * matka;
+            double hinta = litraa * 1.595;
+            Console.WriteLine("matkaan kuluu {0} litraa bensaa ja {1} euroa", litraa, hinta);
         }
+
+        public static void Tehtava07()
+        {
+            //Tee ohjelma, joka näyttää onko annettu vuosi karkausvuosi. Vuosiluku kysytään käyttäjältä.
+            int vuosi;
+            Console.WriteLine("Anna vuosiluku");
+            vuosi = int.Parse(Console.ReadLine());
+            if (vuosi % 400 == 0)
+                Console.WriteLine("Vuosi {0} on karkausvuosi", vuosi);
+            else if (vuosi % 100 == 0)
+                Console.WriteLine("Vuosi {0} ei ole karkausvuosi", vuosi);
+            else if (vuosi % 4 == 0)
+                Console.WriteLine("Vuosi {0} on karkausvuosi", vuosi);
+            else
+                Console.WriteLine("Vuosi {0} ei ole karkausvuosi", vuosi);
+            Console.ReadKey();
+
+        }
+
+        public static void Tehtava08()
+        {
+            //Tee ohjelma, joka kysyy käyttäjältä 3 kokonaislukua ja tulostaa niistä suurimman.
+            Console.WriteLine("Anna 3 numeroa: ");
+            double luku1 = double.Parse(Console.ReadLine());
+            double luku2 = double.Parse(Console.ReadLine());
+            double luku3 = double.Parse(Console.ReadLine());
+
+            if (luku1 > luku2 && luku1 > luku3)
+            {
+                Console.WriteLine("Suurin luku on: " + luku1);
+            }
+            else if (luku2 > luku1 && luku2 > luku3)
+            {
+                Console.WriteLine("Suurin luku on: " + luku2);
+            }
+            else
+            {
+                Console.WriteLine("Suurin luku on: " + luku3);
+            }
+
+        }
+
+        public static void Tehtava09()
+        {
+            //Tee ohjelma, joka kysyy käyttäjältä lukuja, kunnes hän syöttää luvun 0. Ohjelman tulee tulostaa syötettyjen lukujen summa.
+            string x;
+            double t, s = 0;
+      
+
+            Console.WriteLine("Numero 0 lopettaa ohjelman");
+            Console.WriteLine("Anna numeroita: ");
+            while ((x = Console.ReadLine()) != "0")
+            {
+                t = Convert.ToDouble(x);
+                s += t;
+               
+            }
+            Console.WriteLine("Numeroiden summa on: {0}", s);
+           
+        }
+
+        public static void Tehtava10()
+        {
+            //Tee ohjelma, joka alustaa sovellukseen käyttöö seuraavan taulukon arvot = [1,2,33,44,55,68,77,96,100]. Käy sovelluksessa taulukko läpi ja tulosta ruutuun "HEP"-sana aina kun taulukossa oleva luku on parillinen.
+            int[] numero = new int[9];
+            numero[0] = 1;
+            numero[1] = 2;
+            numero[2] = 33;
+            numero[3] = 44;
+            numero[4] = 55;
+            numero[5] = 68;
+            numero[6] = 77;
+            numero[7] = 96;
+            numero[8] = 100;
+            foreach (int x in numero)
+            {
+                if (x % 2 == 0)
+                {
+                    Console.WriteLine("{0} HEP!", x);
+                }
+                else if (x % 2 != 0)
+                {
+                    Console.WriteLine("{0}", x);
+                }
+            }
+        }
+
+        public static void Tehtava11()
+        {
+            //Tee kahden sisäkkäisen for-silmukan avulla ohjelma, joka tulostaa seuraavanlaisen kuvion:
+            int x;
+            Console.WriteLine("Anna rivimäärä: ");
+            x = int.Parse(Console.ReadLine());
+            for (int rivi = 1; rivi <= x; ++rivi)
+            {
+                for (int lkm = 1; lkm <= rivi; ++lkm)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+            } 
+        }
+
     }
-    
 }
 
 
