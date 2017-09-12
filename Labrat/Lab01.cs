@@ -244,6 +244,19 @@ namespace Labrat
             } 
         }
 
+        public static void Tehtava12()
+        {
+            //Tee ohjelma, joka kysyy käyttäjältä 5 kokonaislukua. Luvut tulee sijoittaa taulukkoon. Ohjelman tulee tulostaa annetut luvut käänteisessä järjestyksessä.
+            int[] numero = new int[5];
+
+            Console.WriteLine("Syötä 5 numeroa: ");
+            for (int i = 0;i<5;i++)
+            {
+                numero[i] = Convert.ToInt32(Console.ReadLine());
+            }
+          
+            Console.WriteLine("käänteisjärjestys {0},{1},{2},{3},{4}", numero[4], numero[3], numero[2], numero[1], numero[0]);
+        }
     }
 }
 
