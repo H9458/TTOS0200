@@ -52,7 +52,7 @@ namespace Labrat
         }
         public void MoistureDown()
         {
-            Moisture += 5;
+            Moisture -= 5;
         }
 
         public void StateUp()
@@ -191,6 +191,77 @@ namespace Labrat
         //UML-kaavio
         //https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Pesukone.xml#R7VbLbtswEPwaAe2hhR6x4xxjOY9DggZ1ip4ZaS0RobgCRcd2vr5LirQk20HUBOiphmCIs0Nyd2dIKEjSanujWF3eYw4iiMN8GySLII7PJlP6N8CuBabnDigUz1so6oAlfwUHhg5d8xyaAVEjCs3rIZihlJDpAcaUws2QtkIx3LVmBRwBy4yJY%2FQ3z3XZorN42uG3wIvS7xxNL9rIE8ueC4Vr6fYL4mRlf224Yn4tV2hTshw3PSi5CpJUIer2rdqmIExrfdvaeddvRPd5K5B6zITzdsILE2tX%2BgM062eU4PLTO9%2BTZsMrwSiQzFco9dJFIhozwQtJ7xntCoqAF1CaUzsvXUBjTWhWcpHfsR2uTW6Npl750bxExV9pWSbcmhRW2jkjng0YSzOT4JBQBQ1xHnzB0QF0z7YD4h1rtAMyFILVDX%2Fal1ExVXA5R62xciRf9DUXIkWByvbCa5rMj%2FvtJDAdgG0Pcv2%2FAaxAqx1RXDQOnRfcWYku3HjTOS%2BaOqzsuS7xJmLO7cV%2B7U5xenGinzbA7MgAQUxVhbdMZ7T5pfWA4rIIjPmTKLRF914N%2BXFXw1iu5pXjcmpZP3rgN2qftj5Q%2BAy%2B9xJbA%2FbkcJD3oICVftOBTc0yyu%2FOchZnHfLTtdVASHNXwp7Kkuc5SOMe1Eyz1iom2xope9v2yZweEiINv0%2BCCSWe0jjqxvQYutIpSqqFcWsUIB9uwHjxhIXOR1vIWcar%2BJ5jZvHnDXNxwjAHygluFWmV8%2Fdn9CHZKhJAQKfTo5Fx8S060jI51jI5oZtgTyAesOGao1lftdwDPf%2BBZFE08pTPPi%2BZ3%2Br0If9Rg%2Fzy1R7Jt0%2BtZaYCG3iXugRt7oNoLDEeS0zeJT7S3fKrHkVb4MZX%2Ff%2Fe%2BbiJR148cfj3Nw8Nu%2B8gG%2Bt9ayZXfwA%3D
 
+    }
+
+    public class TV
+    {
+        //Tehtävänäsi on ohjelmoida television toiminta. Samoin kuin edellinen tehtävä: mitä ominaisuuksia ja toimintoja tekisit Televisio-luokkaan?
+
+        // field variables        
+        // properties
+        private string state;
+        public string State
+        {
+            get { return state; }
+            set { state = value; }
+        }
+
+        public double Channel
+        {
+            get; set;
+        }
+
+        public double Volume
+        {
+            get; set;
+        }
+
+        // constructors
+        // methods
+        public void ChannelUp()
+        {
+            Channel += 1;
+        }
+        public void ChannelDown()
+        {
+            Channel -= 1;
+        }
+
+        public void VolumeUp()
+        {
+            Volume += 1;
+        }
+        public void VolumeDown()
+        {
+            Volume -= 1;
+        }
+
+        public void StateOn()
+        {
+            State = "On";
+        }
+        public void StateOff()
+        {
+            State = "Off";
+        }
+
+        //Pääohjelma
+        public static void main()
+        {
+            TV televisio = new TV();
+            televisio.Channel= 0;
+            televisio.Volume = 0;
+            televisio.State = "Off";
+
+            Console.WriteLine("State: {0}", televisio.state);
+            Console.WriteLine("Channel: {0}", televisio.Channel);
+            Console.WriteLine("Volume: {0}", televisio.Volume);
+            Console.WriteLine(" ");
+
+        }
+
+        //UML-kaavio
+        //https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=TV.xml#R7VZdb9sgFP01lraHTcZu8%2FHYOG33kGrV0rXP1MY2KuZamDRJf%2F0uBmI7Sduslfa0yFLgcADfcw7IQZxUm2tF6%2FIGMiaCKMw2QTwPooicRSP8M8jWIqOpAwrFM0fqgCV%2FYQ4MHbriGWsGRA0gNK%2BHYApSslQPMKoUrIe0HMRw15oW7ABYplQcog8806VFJ74sg%2F9gvCj9zmQ0tSOPNH0qFKyk2y%2BI4rz92eGK%2BrVcoU1JM1j3oPgyiBMFoG2r2iRMGG29bHbe1Suju%2FdWTOpTJozthGcqVq70u3v3Znrr1WjWvBJUYm%2BWg9RLN0KwTwUvJLZT3I8pBJ6Z0hyFvHADGmpE05KLbEG3sDJv1WhUyfdmJSj%2BgstS4dbEYaVdJqLJgLE0MxEOEVWsQc6tL5XsQTd0MyAuaKMdkIIQtG74466MiqqCyxloDZUj%2BaKvuBAJCFCtFt7NeHaotBPfKMA2Pcgpf82gYlptkeJGo9ClwJ0SMnX9dZc5MnJY2ctb5InU5bzYrd15jQ1n93HrJwfWBxFWFaLGGoGLNgOKyyIwsY9J2BbdaxpyUlI8gcLSM1gZSd%2Bg34NYVWzI3gsbaqfbECh4Yl54CTZ9PS8c5AMoWK5fjV9T0xQLWbSc%2BVmH%2FHKaGghwbi7aw1jyLGPSRAdQDGpzYqqogUvdan4%2BwwddSMLv58E5vniCfdL18TF0pROQWAvlbUoYhnDNTBCP5Gd8cn5cXryF78VlEn0%2BLdMjadlzTvDWEeucvzbJh2yr0ADBOp%2FujI3zb%2BTAy%2FjQy%2FiIb4I%2BMnELDdcczPrKcvf8%2FAeWEXLiEZ983jK%2F1fET%2FlN%2B%2BdoexFdOqyXl%2Bdus7gr4XZ%2FKnMP6nb13N8UJi1pib83%2F98nHw3nihULGf3%2BjYLf7rGnHet%2BO8eUf
     }
 }
 
