@@ -258,6 +258,18 @@ namespace Labrat
             Console.WriteLine("Volume: {0}", televisio.Volume);
             Console.WriteLine(" ");
 
+            Console.WriteLine("Set state (On/Off) :");
+            televisio.State = (Console.ReadLine());
+            Console.WriteLine("Set channel :");
+            televisio.Channel = int.Parse(Console.ReadLine());
+            Console.WriteLine("Set volume :");
+            televisio.Volume = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("State: {0}", televisio.state);
+            Console.WriteLine("Channel: {0}", televisio.Channel);
+            Console.WriteLine("Volume: {0}", televisio.Volume);
+            Console.WriteLine(" ");
+
         }
 
         //UML-kaavio
