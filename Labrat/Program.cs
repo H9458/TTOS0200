@@ -11,7 +11,8 @@ namespace Labrat
         static void Main(string[] args)
         {
             //Lab01.Tehtava01();
-            TV.main();
+            //TV.main();
+            //Lab03.main();
         }
     }
 }
