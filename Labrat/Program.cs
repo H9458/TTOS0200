@@ -12,7 +12,7 @@ namespace Labrat
         {
             //Lab01.Tehtava01();
             //TV.main();
-            //Lab03.main();
+            Vahvistin.main();
         }
     }
 }
