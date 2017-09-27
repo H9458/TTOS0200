@@ -73,7 +73,8 @@ namespace Labrat
     public class Vahvistin
     //Tehtävänäsi on ohjelmoida yksinkertaisen vahvistimen toiminta, jolla voidaan kontrolloida äänenvoimakkuutta välillä 0-100. Toteuta Vahvistin-luokka ja tee pääohjelma, jolla luot olion Vahvistin-luokasta. Säädä ja kokeile vahvistinta eri äänenvoimakkuuksilla. Käytä Vahvistin-luokassa get- ja set-aksessoreita. get-aksessori palauttaa äänenvoimakkuuden ja set-aksessori rajaa äänenvoimakkuuden arvoa.
     {
-
+        private const int minVolume = 0;
+        private const int maxVolume = 100;
         private int volume;
         public int Volume
         {
@@ -84,20 +85,20 @@ namespace Labrat
             set
             {
                 
-                if (volume < 0)
+                if (value < minVolume)
                 {
-                    volume = 0;
-                    Console.WriteLine("Äänettömällä");
-                    volume = 0;
+                 
+                    Console.WriteLine("Äänettömällä, volume on nyt: "+ minVolume);
+                    volume = minVolume;
                 }
-                else if (volume > 100)
+                else if (value > maxVolume)
                 {
-                    Console.WriteLine("Liian kovalla");
-                    volume = 100;
+                    Console.WriteLine("Liian kovalla, volumme on nyt: "+ maxVolume);
+                    volume = maxVolume;
                 }
                 else
                 {
-                    Console.WriteLine("Volume on" + value);
+                    Console.WriteLine("Volume on: " + value);
                     volume = value;
                 }
             }
@@ -107,15 +108,20 @@ namespace Labrat
         public static void main()
         {
             Vahvistin vahvistin = new Vahvistin();
-
+            bool result;
             do
             {
                 Console.WriteLine("Anna volumi (1-100): ");
-                vahvistin.volume = int.Parse(Console.ReadLine());
-                Console.WriteLine("Nykyinen volumi on: {0}", vahvistin.volume);
-                Console.WriteLine(" ");
+                String syote = Console.ReadLine();
+                int volume;
+                result = Int32.TryParse(syote, out volume);
+               
+                if (result)
+                {
+                    vahvistin.Volume = volume;
+                }
             }
-            while (vahvistin.volume <= 100 && vahvistin.volume >= 0);
+            while (result);
 
 
 
