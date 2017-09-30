@@ -13,7 +13,7 @@ namespace Labrat
             //Lab01.Tehtava01();
             //TV.main();
             //Vahvistin.main();
-            Boss.main();
+            Boat.main();
         }
     }
 }
