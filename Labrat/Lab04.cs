@@ -135,16 +135,22 @@ namespace Labrat
            
             Boat boat = new Boat("Yamaha", "Model 1200" , "Motorboat", "5");
             boat.YearModel= "1990";
-            boat.Color = "White";
+            boat.Color = "White ";
             Console.WriteLine(boat.ToString());
 
             
-            Bike bike = new Bike("Jopo", "City", "False", "N/A");
+            Bike bike = new Bike("Jopo", "City", "False", "N/A\n");
             bike.YearModel = "2010";
             bike.Color = "Blue ";
             Console.WriteLine(bike.ToString());
 
         }
+    }
+
+    class Radio
+    {
+        //Kannettavassa radiossa on vain kolme säädintä: päälle/pois-kytkin, äänen voimakkuuden säädin (arvot 0, 1, 2,..., 9) ja kuunneltavan kanavan taajuusvalinta (2000.0 - 26000.0). Laadi luokka kannettavan radion toteutukseksi. Käytä tekemääsi luokkaa pääohjelmasta käsin, eli testaile radion toimivuutta erilaisilla voimakkuuden ja taajuuden arvoilla. Jätä asetus- ja tulostuslauseet näkyville pääohjelmaan, jotta radio-olion käyttö voidaan todentaa.
+
     }
 
 }
