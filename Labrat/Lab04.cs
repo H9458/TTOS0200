@@ -132,13 +132,13 @@ namespace Labrat
 
         public static void main()
         {
-           
-            Boat boat = new Boat("Yamaha", "Model 1200" , "Motorboat", "5");
-            boat.YearModel= "1990";
+
+            Boat boat = new Boat("Yamaha", "Model 1200", "Motorboat", "5");
+            boat.YearModel = "1990";
             boat.Color = "White ";
             Console.WriteLine(boat.ToString());
 
-            
+
             Bike bike = new Bike("Jopo", "City", "False", "N/A\n");
             bike.YearModel = "2010";
             bike.Color = "Blue ";
@@ -150,7 +150,117 @@ namespace Labrat
     class Radio
     {
         //Kannettavassa radiossa on vain kolme säädintä: päälle/pois-kytkin, äänen voimakkuuden säädin (arvot 0, 1, 2,..., 9) ja kuunneltavan kanavan taajuusvalinta (2000.0 - 26000.0). Laadi luokka kannettavan radion toteutukseksi. Käytä tekemääsi luokkaa pääohjelmasta käsin, eli testaile radion toimivuutta erilaisilla voimakkuuden ja taajuuden arvoilla. Jätä asetus- ja tulostuslauseet näkyville pääohjelmaan, jotta radio-olion käyttö voidaan todentaa.
+        public int OnOff { set; get; }
+        private const int MinVolume = 0;
+        private const int MaxVolume = 9;
+        private const float MinHz = 2000.0f;
+        private const float MaxHz = 26000.0f;
+        private int volume;
+        private float hz;
 
+        public int Volume
+        {
+            get
+            {
+                return volume;
+            }
+            set
+            {
+                if (value < MinVolume)
+                {
+                    Console.WriteLine("Volume asetettu minimiin: {0}", MinVolume);
+                    volume = MinVolume;
+                }
+                else if (value > MaxVolume)
+                {
+                    Console.WriteLine("Volume asetettu maksimiin: {0}", MaxVolume);
+                    volume = MaxVolume;
+                }
+                else
+                {
+                    Console.WriteLine("Volume on: {0}", value);
+                    volume = value;
+                }
+            }
+        }
+
+        public float Hz
+        {
+            get
+            {
+                return hz;
+            }
+            set
+            {
+                if (value < MinHz)
+                {
+                    Console.WriteLine("Taajuus asetettu minimiin: {0}", MinHz);
+                    hz = MinHz;
+                }
+                else if (value > MaxHz)
+                {
+                    Console.WriteLine("Taajuus asetettu maksimiin: {0} ", MaxHz);
+                    hz = MaxHz;
+                }
+                else
+                {
+                    Console.WriteLine("Taajuus on: {0} ", value);
+                    hz = value;
+                }
+
+            }
+
+        }
+        public static void SaadaVirta()
+        {
+            Radio radio = new Radio();
+            int virta;
+
+            Console.WriteLine("Aseta virta päälle/pois (1=päälle 0=pois): ");
+            String syote = Console.ReadLine();
+
+            virta = Int32.Parse(syote);
+
+            if (virta == 1)
+            {
+                radio.OnOff = 1;
+                Console.WriteLine("Virta on päällä");
+            }
+            else if (virta == 0)
+            {
+                Console.WriteLine("Virta on pois");
+            }
+            else
+            {
+                Console.WriteLine("ERROR!");
+            }
+
+        }
+        public static void SaadaVolumea()
+        {
+            Radio radio = new Radio();
+            Console.WriteLine("Anna volume (0-9): ");
+            String syote = Console.ReadLine();
+
+            int i = int.Parse(syote);
+
+            radio.Volume = i;
+        }
+        public static void SaadaTaajuus()
+        {
+            Radio radio = new Radio();
+            Console.WriteLine("Anna taajuus (2000,0-26000,0 Hz): ");
+            String syote = Console.ReadLine();
+
+            float i = float.Parse(syote);
+
+           radio.Hz = i;
+        }
+      public static void program()
+        {
+            Radio.SaadaVirta();
+            Radio.SaadaVolumea();
+            Radio.SaadaTaajuus();
+        }
     }
-
 }
