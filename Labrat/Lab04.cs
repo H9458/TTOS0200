@@ -72,7 +72,7 @@ namespace Labrat
         }
 
     }
-    class Vehicle
+    class Vehicle1
     {
         //Toteutettavassa sovelluksessa tulisi pysyä käsittelemään erilaisia kulkuneuvoja. Kaikilla kulkuneuvoilla on löydettävissä yhteisinä ominaisuuksina: nimi, malli, vuosimalli ja väri. Erikoistapauksina pitää pystyä käsittelemään polkupyöriä ja veneitä. Polkupyörän osalta pitää pystyä erottelemaan se, että onko kyseessä vaihdepyörä vai ei sekä mahdollisen vaihteiston mallinimi. Veneiden osalta tietoina pitää ainakin olla veneen tyyppi (soutuvene, moottorivene, kajakki, ...) ja kuinka monta istuinpaikkaa veneestä löytyy.
         public string Name { get; set; }
@@ -80,12 +80,12 @@ namespace Labrat
         public string YearModel { get; set; }
         public string Color { get; set; }
 
-        public Vehicle()
+        public Vehicle1()
         {
 
         }
 
-        public Vehicle(string name, string model)
+        public Vehicle1(string name, string model)
         {
             Name = name;
             Model = model;
@@ -96,7 +96,7 @@ namespace Labrat
             return "Name:" + Name + " Model:" + Model + " Yearmodel:" + YearModel + " Color:" + Color;
         }
     }
-    class Bike : Vehicle
+    class Bike : Vehicle1
     {
         public string GearWheels { get; set; }
         public string GearName { get; set; }
@@ -113,7 +113,7 @@ namespace Labrat
             return base.ToString() + "Gearwheels:" + GearWheels + " " + "Gearname:" + GearName;
         }
     }
-    class Boat : Vehicle
+    class Boat : Vehicle1
     {
         public string BoatType { get; set; }
         public string SeatCount { get; set; }

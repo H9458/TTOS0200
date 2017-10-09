@@ -13,7 +13,9 @@ namespace Labrat
             //Lab01.Tehtava01();
             //TV.main();
             //Vahvistin.main();
-            Radio.program();
+            //Radio.program();
+            //Vehicle.main();
+            Ohjelma.main();
         }
     }
 }
