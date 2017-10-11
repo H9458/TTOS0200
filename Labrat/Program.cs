@@ -15,7 +15,8 @@ namespace Labrat
             //Vahvistin.main();
             //Radio.program();
             //Vehicle.main();
-            Ohjelma.main();
+            //Ohjelma.main();
+            programmi.main();
         }
     }
 }
