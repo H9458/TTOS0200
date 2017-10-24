@@ -16,7 +16,7 @@ namespace Labrat
             //Radio.program();
             //Vehicle.main();
             //Ohjelma.main();
-            programmi.main();
+            TestKortti.main();
         }
     }
 }

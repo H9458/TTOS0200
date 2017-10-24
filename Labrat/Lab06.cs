@@ -127,9 +127,101 @@ namespace Labrat
                 }
             }
         }
+        
+ 
+    }
+    class TestKortti
+    {
+        public class Pakka
+        {
+            #region properties
+            private int korttinro = 1;
+
+            public List<Kortti> Kortit { get; set; }
+            #endregion
+
+            #region Constructors
+            public Pakka()
+            {
+                Kortit = new List<Kortti>();
+            }
+            #endregion
+
+            #region Methods
+            public override string ToString()
+            {
+                foreach (Kortti item in Kortit)
+                {
+                    Console.WriteLine("" + korttinro + ". " + item.ToString());
+                    korttinro++;
+                }
+                return "\n-Kortit loppu-\n";
+            }
+            #endregion
+        }
+        public static void TestaaKortti()
+        {
+           
+           Pakka pakka1 = new Pakka();
+        
+
+            for (int i = 1; i <= 13; i++)
+            {
+                pakka1.Kortit.Add(new Kortti("Pata", i));
+            }
+            for (int i = 1; i <= 13; i++)
+            {
+                pakka1.Kortit.Add(new Kortti("Risti", i));
+            }
+            for (int i = 1; i <= 13; i++)
+            {
+                pakka1.Kortit.Add(new Kortti("Ruutu", i));
+            }
+            for (int i = 1; i <= 13; i++)
+            {
+                pakka1.Kortit.Add(new Kortti("Hertta", i));
+            }
+
+            Console.WriteLine("Korttipakka järjestyksessä:");
+            Console.WriteLine(pakka1.ToString());
+        }
         public static void main()
         {
-            Testaa();
+            //Testaa();
+            TestaaKortti();
         }
     }
+
+    public class Kortti
+    {
+
+        #region Properties
+        public string Maa { get; set; }
+        public int Numero { get; set; }
+        #endregion
+        #region Constructors
+        public Kortti()
+        {
+
+        }
+        public Kortti(string maa, int numero)
+        {
+            Maa = maa;
+            Numero = numero;
+        }
+        #endregion
+        #region Methods
+        public override string ToString()
+        {
+            return string.Format("{0} {1}", Maa, Numero);
+        }
+        #endregion
+
+      
+
+    }
+
+
+
+
 }
