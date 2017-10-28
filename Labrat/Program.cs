@@ -17,7 +17,9 @@ namespace Labrat
             //Vehicle.main();
             //Ohjelma.main();
             //TestKortti.main();
-            Ohjelma2.main();
+            //Ohjelma2.main();
+            //Luvut.main();
+            Lukeminen.main();
         }
     }
 }
