@@ -10,8 +10,8 @@ namespace JAMK.IT
   {
     static void Main(string[] args)
     {
-      TestaaKiuas();
-      JAMK.IT.TestCat.Testaa();
+            //TestaaKiuas();
+            //JAMK.IT.TestCat.Testaa();
     }
 
     //Lab3 Tehtävä 1: Kiuas-luokan testaus

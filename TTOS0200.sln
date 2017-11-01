@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOdemot", "OOdemot\OOdemot.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labrat", "Labrat\Labrat.csproj", "{83A208DB-FB6A-49EF-8AA6-F2C60B03A88F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testit", "Testit\Testit.csproj", "{49AC056B-8322-41DB-81EC-A65EA936C80A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestitTests", "TestitTests\TestitTests.csproj", "{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{83A208DB-FB6A-49EF-8AA6-F2C60B03A88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83A208DB-FB6A-49EF-8AA6-F2C60B03A88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83A208DB-FB6A-49EF-8AA6-F2C60B03A88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49AC056B-8322-41DB-81EC-A65EA936C80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49AC056B-8322-41DB-81EC-A65EA936C80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49AC056B-8322-41DB-81EC-A65EA936C80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49AC056B-8322-41DB-81EC-A65EA936C80A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
