@@ -19,7 +19,9 @@ namespace Labrat
             //TestKortti.main();
             //Ohjelma2.main();
             //Luvut.main();
-            Lukeminen.main();
+            //Lukeminen.main();
+            //Dice.main();
+            Product.main();
         }
     }
 }
