@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testit", "Testit\Testit.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestitTests", "TestitTests\TestitTests.csproj", "{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDemo", "WPFDemo\WPFDemo.csproj", "{62B29D71-AE06-4FF2-868C-4DD5349C0EA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D070BC8D-7D2E-46C3-B050-31B8AD0AE90C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B29D71-AE06-4FF2-868C-4DD5349C0EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B29D71-AE06-4FF2-868C-4DD5349C0EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B29D71-AE06-4FF2-868C-4DD5349C0EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B29D71-AE06-4FF2-868C-4DD5349C0EA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
