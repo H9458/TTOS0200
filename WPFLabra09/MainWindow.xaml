@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="button" Content="Trucks" HorizontalAlignment="Left" Margin="90,113,0,0" VerticalAlignment="Top" Width="98" Height="41" Click="button_Click"/>
-        <Button x:Name="button1" Content="Cars" HorizontalAlignment="Left" Margin="319,113,0,0" VerticalAlignment="Top" Width="104" Height="41" Click="button1_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="77,215,0,0" TextWrapping="Wrap" Text="0&#xD;&#xA;" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="295,215,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="textBox1_TextChanged"/>
+        <Button x:Name="BtnTruck" Content="Trucks" HorizontalAlignment="Left" Margin="90,113,0,0" VerticalAlignment="Top" Width="98" Height="41" Click="BtnTruck_Click"/>
+        <Button x:Name="BtnCar" Content="Cars" HorizontalAlignment="Left" Margin="319,113,0,0" VerticalAlignment="Top" Width="104" Height="41" Click="BtnCar_Click"/>
+        <TextBox x:Name="txbCar" HorizontalAlignment="Left" Height="23" Margin="319,216,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" TextChanged="txbCar_TextChanged"/>
+        <TextBox x:Name="txbTruck" HorizontalAlignment="Left" Height="23" Margin="81,216,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" TextChanged="txbTruck_TextChanged"/>
 
     </Grid>
 </Window>

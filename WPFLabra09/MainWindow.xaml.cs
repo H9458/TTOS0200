@@ -25,19 +25,30 @@ namespace WPFLabra09
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        private void txbTruck_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            int lkm = int.Parse(txbTruck.Text);
+            txbTruck.Text = "" + lkm;
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void txbCar_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            int lkm = int.Parse(txbCar.Text);
+            txbCar.Text = "" + lkm;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void BtnCar_Click(object sender, RoutedEventArgs e)
         {
-
+            int lkm = int.Parse(txbCar.Text) + 1;
+            txbCar.Text = "" + lkm;
         }
+
+        private void BtnTruck_Click(object sender, RoutedEventArgs e)
+        {
+            int lkm = int.Parse(txbTruck.Text) + 1;
+            txbTruck.Text = "" + lkm;
+        }
+
+    
     }
 }
