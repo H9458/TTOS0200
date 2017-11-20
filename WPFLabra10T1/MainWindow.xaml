@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPFLabra10T1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLabra10T1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <CheckBox x:Name="BoxMilk" Content="Milk" HorizontalAlignment="Left" Margin="40,34,0,0" VerticalAlignment="Top" Checked="BoxMilk_Checked"/>
+        <CheckBox x:Name="BoxButter" Content="Butter" HorizontalAlignment="Left" Margin="40,54,0,0" VerticalAlignment="Top" Checked="BoxButter_Checked"/>
+        <CheckBox x:Name="BoxBeer" Content="Beer" HorizontalAlignment="Left" Margin="40,74,0,0" VerticalAlignment="Top" Checked="BoxBeer_Checked"/>
+        <CheckBox x:Name="BoxChicken" Content="Chicken" HorizontalAlignment="Left" Margin="40,94,0,0" VerticalAlignment="Top" Checked="BoxChicken_Checked"/>
+        <CheckBox x:Name="BoxLemonade" Content="Lemonade" HorizontalAlignment="Left" Margin="40,114,0,0" VerticalAlignment="Top" Checked="BoxLemonade_Checked"/>
+        <Button x:Name="BtnBuy" Content="Buy" HorizontalAlignment="Left" Margin="36,134,0,0" VerticalAlignment="Top" Width="48" Click="BtnBuy_Click"/>
+        <TextBox x:Name="txtBox" HorizontalAlignment="Left" Height="51" Margin="36,174,0,0" TextWrapping="Wrap" Text="Shopping list" VerticalAlignment="Top" Width="124" TextChanged="txtBox_TextChanged"/>
+    </Grid>
+</Window>
